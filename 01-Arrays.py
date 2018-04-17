@@ -29,3 +29,4 @@ lNumbers = [10, 384, -10, 1, 23, 0, 1]
 max = lNumbers[0]
 for num in lNumbers:
   if num > max:
+    max = num
