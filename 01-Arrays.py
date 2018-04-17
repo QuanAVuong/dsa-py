@@ -23,10 +23,11 @@ print("21 =>", lItems[::2])
 print("21 =>", lItems[::-1])
 
 
-# Find max
+# Find max: linear search O(n)
 lNumbers = [10, 384, -10, 1, 23, 0, 1]
 
 max = lNumbers[0]
 for num in lNumbers:
   if num > max:
     max = num
+print(f"Max = {max} ")
