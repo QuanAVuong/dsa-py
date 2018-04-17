@@ -26,4 +26,5 @@ print("21 =>", lItems[::-1])
 # Find max
 lNumbers = [10, 384, -10, 1, 23, 0, 1]
 
+max = lNumbers[0]
 for num in lNumbers:
