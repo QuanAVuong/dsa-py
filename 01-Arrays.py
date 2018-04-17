@@ -7,3 +7,7 @@ print("6 =>", lItems[0])
 
 for item in lItems:
   print("9 =>", item)
+
+
+for i in range(len(lItems)):
+  print("13:", lItems[i])
