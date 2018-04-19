@@ -8,6 +8,7 @@ class LinkedList(object):
     self.head = None;
     self.size = 0;
   
+  # O(1)
   def insertStart(self, data):
     self.size += 1
     newNode = Node(data)
@@ -18,5 +19,10 @@ class LinkedList(object):
       newNode.nextNode = self.head      # point newNode's nextNode property to current head
       self.head = newNode     # Make newNode the current head
 
+  # O(1)
   def size(self):
     return self.size
+
+  # O(n): Traversing the Linkedlist
+  def sizeSearch(self):
+    currentNode = self.head
