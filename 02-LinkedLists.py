@@ -30,3 +30,4 @@ class LinkedList(object):
 
     while currentNode is not None:
       size += 1
+      currentNode = currentNode.nextNode
