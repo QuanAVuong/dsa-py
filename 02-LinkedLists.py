@@ -6,3 +6,4 @@ class Node(object):
 class LinkedList(object):
   def __init__(self):
     self.head = None;
+    self.size = 0;
