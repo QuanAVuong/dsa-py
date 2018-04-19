@@ -9,3 +9,4 @@ class LinkedList(object):
     self.size = 0;
   
   def insertStart(self, data):
+    self.size += 1
