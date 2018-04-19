@@ -17,3 +17,6 @@ class LinkedList(object):
     else: 
       newNode.nextNode = self.head      # point newNode's nextNode property to current head
       self.head = newNode     # Make newNode the current head
+
+  def size(self):
+    return self.size
