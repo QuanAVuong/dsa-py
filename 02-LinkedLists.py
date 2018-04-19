@@ -26,3 +26,4 @@ class LinkedList(object):
   # O(n): Traversing the Linkedlist
   def sizeSearch(self):
     currentNode = self.head
+    size = 0
