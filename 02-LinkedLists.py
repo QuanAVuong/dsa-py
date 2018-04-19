@@ -29,3 +29,4 @@ class LinkedList(object):
     size = 0
 
     while currentNode is not None:
+      size += 1
