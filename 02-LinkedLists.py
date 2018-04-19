@@ -27,3 +27,5 @@ class LinkedList(object):
   def sizeSearch(self):
     currentNode = self.head
     size = 0
+
+    while currentNode is not None:
