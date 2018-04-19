@@ -12,5 +12,8 @@ class LinkedList(object):
     self.size += 1
     newNode = Node(data)
 
-    if not self.head:
+    if not self.head: # not None => True; not (self.head object) => False
       self.head = newNode;
+    else: 
+      newNode.nextNode = self.head      # point newNode's nextNode property to current head
+      self.head = newNode     # Make newNode the current head
