@@ -36,3 +36,4 @@ class LinkedList(object):
 
   def insertEnd(self, data):
     self.size += 1
+    newNode = Node(data)
