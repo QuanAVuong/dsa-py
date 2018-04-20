@@ -45,6 +45,9 @@ class LinkedList(object):
 
     currentNode.nextNode         = newNode
 
-
+  # O(n):                            Traversing LinkedList  
   def traverseList(self):
     currentNode = self.head
+
+    while currentNode is not None:
+      print(f"Node #{self.size} = {self.data}")
