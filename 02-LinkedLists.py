@@ -23,6 +23,8 @@ class LinkedList(object):
   def remove(self, data):
     if self.head is None:
       return
+    
+    self.size -= 1
 
   # O(1)
   def size(self):                  
