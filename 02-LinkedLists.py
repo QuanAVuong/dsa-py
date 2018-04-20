@@ -40,4 +40,4 @@ class LinkedList(object):
     currentNode = self.head
 
     while currentNode is not None:
-      
+      currentNode = currentNode.nextNode
