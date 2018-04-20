@@ -38,3 +38,6 @@ class LinkedList(object):
     self.size += 1
     newNode = Node(data)
     currentNode = self.head
+
+    while currentNode is not None:
+      
