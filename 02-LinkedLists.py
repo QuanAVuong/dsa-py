@@ -51,3 +51,4 @@ class LinkedList(object):
 
     while currentNode is not None:
       print(f"Node #{self.size} = {self.data}")
+      currentNode = currentNode.nextNode
