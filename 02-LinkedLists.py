@@ -19,6 +19,11 @@ class LinkedList(object):
       newNode.nextNode           = self.head  # => point newNode's nextNode property to current head
       self.head                  = newNode  #   => Make newNode the current head
 
+  
+  def remove(self, data):
+    if self.head is None:
+      return
+
   # O(1)
   def size(self):                  
     return self.size
@@ -34,7 +39,7 @@ class LinkedList(object):
     
     return size
 
-  # O(n):                            Traversing LinkedList
+  # O(n):                          Traversing LinkedList
   def insertEnd(self, data):       
     self.size                   += 1
     newNode                      = Node(data)
@@ -45,10 +50,10 @@ class LinkedList(object):
 
     currentNode.nextNode         = newNode
 
-  # O(n):                            Traversing LinkedList  
-  def traverseList(self):
-    currentNode = self.head
+  # O(n):                          Traversing LinkedList  
+  def traverseList(self):          
+    currentNode                  = self.head
 
-    while currentNode is not None:
+    while currentNode is not None: 
       print(f"Node #{self.size} = {self.data}")
-      currentNode = currentNode.nextNode
+      currentNode                = currentNode.nextNode
