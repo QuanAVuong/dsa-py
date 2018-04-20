@@ -34,13 +34,17 @@ class LinkedList(object):
     
     return size
 
-  def insertEnd(self, data):
-    self.size += 1
-    newNode = Node(data)
+  # O(n):                            Traversing LinkedList
+  def insertEnd(self, data):       
+    self.size                   += 1
+    newNode                      = Node(data)
+    currentNode                  = self.head
+
+    while currentNode is not None: 
+      currentNode                = currentNode.nextNode
+
+    currentNode.nextNode         = newNode
+
+
+  def traverseList(self):
     currentNode = self.head
-
-    while currentNode is not None:
-      currentNode = currentNode.nextNode
-
-    currentNode.nextNode = newNode
-    
