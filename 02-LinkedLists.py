@@ -41,3 +41,6 @@ class LinkedList(object):
 
     while currentNode is not None:
       currentNode = currentNode.nextNode
+
+    currentNode.nextNode = newNode
+    
