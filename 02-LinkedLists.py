@@ -64,3 +64,8 @@ class LinkedList(object):
     # Setting up currentNode / previousNode at the beginning
     currentNode = self.head
     previousNode = None
+
+    print(f"\nSearching for node containing `{data}` to remove:")
+
+    while currentNode.data != data:
+      
