@@ -46,13 +46,17 @@ class LinkedList(object):
     currentNode.nextNode         = newNode
 
   # O(n):                          Traversing LinkedList  
-  def traverseList(self):          
-    currentNode                  = self.head
-
-    while currentNode is not None: 
-      print(f"Node #{self.size} = {self.data}")
-      currentNode                = currentNode.nextNode
-
+	def traverseList(self):
+		print("Traversing the list and displaying nodes: ")
+		currentNode = self.head
+		
+		i = 1
+		while currentNode is not None:
+			print(f"node #{i}: {currentNode.data}")
+			currentNode = currentNode.nextNode
+			i += 1
+		
+    print(currentNode)
 
 	def remove(self, data): 
 	
