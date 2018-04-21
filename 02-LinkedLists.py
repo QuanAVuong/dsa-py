@@ -73,14 +73,11 @@ class LinkedList(object):
     previousNode        = None
 
     print(f"\nSearching for node containing `{data}` to remove:")
-    while currentNode.data != data:
+    while currentNode.data != data or currentNode.nextNode == None:
       print(f"currentNode.data {currentNode.data} != {data}")
-      previousNode           = currentNode
-      if currentNode.nextNode == None:
-        print(f"`{data}` NOT FOUND")
-        break
-      else:
-        currentNode = currentNode.nextNode
+      previousNode = currentNode
+      currentNode  = currentNode.nextNode
+    
     print(f"FOUND! currentNode.data {currentNode.data} == {data} ! Removing `{currentNode.data}`")
 
     # Removal control flow based on found node's location
