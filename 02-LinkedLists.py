@@ -70,3 +70,4 @@ class LinkedList(object):
     while currentNode.data != data:
       print(f"currentNode.data {currentNode.data} != {data}")
       previousNode = currentNode
+      currentNode = currentNode.nextNode
