@@ -75,8 +75,11 @@ class LinkedList(object):
     print(f"\nSearching for node containing `{data}` to remove:")
     while currentNode.data != data:
       print(f"currentNode.data {currentNode.data} != {data}")
-      previousNode = currentNode
-      currentNode  = currentNode.nextNode if currentNode.nextNode != None else break
+      if currentNode.nextNode == None:
+        break
+      else: 
+        previousNode = currentNode
+        currentNode  = currentNode.nextNode 
 
     print(f"FOUND! currentNode.data {currentNode.data} == {data} ! Removing `{currentNode.data}`")
 
