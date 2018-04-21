@@ -46,25 +46,24 @@ class LinkedList(object):
     currentNode.nextNode         = newNode
 
   # O(n):                          Traversing LinkedList  
-	def traverseList(self):
-		print("Traversing the list and displaying nodes: ")
-		currentNode = self.head
-		
-		i = 1
-		while currentNode is not None:
-			print(f"node #{i}: {currentNode.data}")
-			currentNode = currentNode.nextNode
-			i += 1
+  def traverseList(self):
+    print("Traversing the list and displaying nodes: ")
+    currentNode = self.head
+    
+    i = 1
+    while currentNode is not None:
+      print(f"node #{i}: {currentNode.data}")
+      currentNode = currentNode.nextNode
+      i += 1
 		
     print(currentNode)
-
-	def remove(self, data): 
-	
-		if self.head is None:  
-			return
-			
-		self.size           = self.size - 1
-		
+  
+  def remove(self, data):
+    if self.head is None:
+      return
+    
+    self.size           -= 1
+    
     # Setting up currentNode / previousNode at the beginning
     currentNode         = self.head
     previousNode        = None
@@ -78,24 +77,24 @@ class LinkedList(object):
 
     # Removal control flow based on found node's location
     if previousNode is None and currentNode.nextNode is None:
-			print(f"The only remaining node: {currentNode.data} is both a head and a tail")
-			print(f"Poiting this list's only head to None will clear it.")
-			self.head = currentNode.nextNode
+      print(f"The only remaining node: {currentNode.data} is both a head and a tail")
+      print(f"Poiting this list's only head to None will clear it.")
+      self.head = currentNode.nextNode
     elif previousNode is None:
-			print(f"Since previousNode is {previousNode}, currentNode: {currentNode.data} is head. \nPointing new head to old head's nextNode: {currentNode.nextNode.data}")
-			self.head = currentNode.nextNode
+      print(f"Since previousNode is {previousNode}, currentNode: {currentNode.data} is head. \nPointing new head to old head's nextNode: {currentNode.nextNode.data}")
+      self.head = currentNode.nextNode
       print(f"old head is still pointing to nextNode: {currentNode.nextNode.data}")
-			currentNode.nextNode = None
-			print(f"removed old head's nextNode reference, now pointing to: {currentNode.nextNode}")
+      currentNode.nextNode = None
+      print(f"removed old head's nextNode reference, now pointing to: {currentNode.nextNode}")
     elif currentNode.nextNode is None:
-			print(f"currentNode: {currentNode.data} is a tail. No need to remove its nextNode reference that is already pointing to None")
-			previousNode.nextNode = currentNode.nextNode
-			print(f"previousNode: {previousNode.data} is now the new tail pointing to {previousNode.nextNode}")
+      print(f"currentNode: {currentNode.data} is a tail. No need to remove its nextNode reference that is already pointing to None")
+      previousNode.nextNode = currentNode.nextNode
+      print(f"previousNode: {previousNode.data} is now the new tail pointing to {previousNode.nextNode}")
     else:
-			previousNode.nextNode = currentNode.nextNode
-			print(f"currentNode.nextNode is still pointing to nextNode: {currentNode.nextNode.data}")
-			currentNode.nextNode = None
-			print(f"removed currentNode's nextNode reference, now pointing to: {currentNode.nextNode}")
+      previousNode.nextNode = currentNode.nextNode
+      print(f"currentNode.nextNode is still pointing to nextNode: {currentNode.nextNode.data}")
+      currentNode.nextNode = None
+      print(f"removed currentNode's nextNode reference, now pointing to: {currentNode.nextNode}")
       
 
 linkedlist = LinkedList()
