@@ -40,7 +40,7 @@ class LinkedList(object):
     newNode                      = Node(data)
     currentNode                  = self.head
 
-    while currentNode is not None: 
+    while currentNode.nextNode is not None: 
       currentNode                = currentNode.nextNode
 
     currentNode.nextNode         = newNode
