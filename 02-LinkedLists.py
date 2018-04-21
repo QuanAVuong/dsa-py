@@ -20,11 +20,11 @@ class LinkedList(object):
       self.head                  = newNode  #   => Make newNode the current head
 
   # O(1)
-  def size(self):                  
+  def size1(self):                  
     return self.size
 
   # O(n):                          Traversing the Linkedlist
-  def sizeSearch(self):            
+  def sizeN(self):            
     currentNode                  = self.head
     size                         = 0
 
