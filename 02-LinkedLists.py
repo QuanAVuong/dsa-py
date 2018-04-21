@@ -52,7 +52,11 @@ class LinkedList(object):
     
     i = 1
     while currentNode is not None:
-      print(f"node #{i}: {currentNode.data}")
+      print(f"node #{i}: {currentNode.data}"
+            ," <-- Both Head and Tail" if self.size == 1
+            else " <-- Current Head" if i == 1
+            else " <-- Current Tail" if currentNode.nextNode == None
+            else "" )
       currentNode = currentNode.nextNode
       i += 1
 		
