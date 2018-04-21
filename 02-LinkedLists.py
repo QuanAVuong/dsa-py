@@ -96,3 +96,41 @@ class LinkedList(object):
 			print(f"currentNode.nextNode is still pointing to nextNode: {currentNode.nextNode.data}")
 			currentNode.nextNode = None
 			print(f"removed currentNode's nextNode reference, now pointing to: {currentNode.nextNode}")
+      
+
+linkedlist = LinkedList()
+print(linkedlist)
+
+linkedlist.insertStart(12)
+linkedlist.insertStart(122)
+linkedlist.insertStart("First Head")
+linkedlist.insertEnd(31)
+linkedlist.insertEnd(-23.34)
+linkedlist.insertEnd("First Tail")
+
+linkedlist.traverseList()
+print(linkedlist.size1())
+
+linkedlist.remove("First Head")
+linkedlist.traverseList()
+print(linkedlist.size1())
+
+linkedlist.remove(12)
+linkedlist.traverseList()
+print(linkedlist.size1())
+
+linkedlist.remove(-23.34)
+linkedlist.traverseList()
+print(linkedlist.size1())
+
+linkedlist.remove(31)
+linkedlist.traverseList()
+print(linkedlist.size1())
+
+linkedlist.remove("First Tail")
+linkedlist.traverseList()
+print(linkedlist.size1())
+
+linkedlist.remove(122)
+linkedlist.traverseList()
+print(linkedlist.size1())
