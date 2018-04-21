@@ -77,3 +77,9 @@ class LinkedList(object):
 			print(f"The only remaining node: {currentNode.data} is both a head and a tail")
 			print(f"Poiting this list's only head to None will clear it.")
 			self.head = currentNode.nextNode
+    elif previousNode is None:
+			print(f"Since previousNode is {previousNode}, currentNode: {currentNode.data} is head. \nPointing new head to old head's nextNode: {currentNode.nextNode.data}")
+			self.head = currentNode.nextNode
+      print(f"old head is still pointing to nextNode: {currentNode.nextNode.data}")
+			currentNode.nextNode = None
+			print(f"removed old head's nextNode reference, now pointing to: {currentNode.nextNode}")
