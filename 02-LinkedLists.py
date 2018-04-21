@@ -63,3 +63,4 @@ class LinkedList(object):
 		
     # Setting up currentNode / previousNode at the beginning
     currentNode = self.head
+    previousNode = None
