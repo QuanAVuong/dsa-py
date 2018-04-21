@@ -1,12 +1,12 @@
 class Node(object):                
   def __init__(self, data):        
     self.data                    = data
-    self.nextNode                = None;
+    self.nextNode                = None
 
 class LinkedList(object):          
   def __init__(self):              
-    self.head                    = None;
-    self.size                    = 0;
+    self.head                    = None
+    self.size                    = 0
   
   # O(1)
   def insertStart(self, data):     
@@ -14,17 +14,10 @@ class LinkedList(object):
     newNode                      = Node(data)
 
     if not self.head:              #            => not None => True; not (self.head object) => False
-      self.head                  = newNode;
+      self.head                  = newNode
     else:                          
       newNode.nextNode           = self.head  # => point newNode's nextNode property to current head
       self.head                  = newNode  #   => Make newNode the current head
-
-  
-  def remove(self, data):
-    if self.head is None:
-      return
-    
-    self.size -= 1
 
   # O(1)
   def size(self):                  
@@ -59,3 +52,14 @@ class LinkedList(object):
     while currentNode is not None: 
       print(f"Node #{self.size} = {self.data}")
       currentNode                = currentNode.nextNode
+
+
+	def remove(self, data):
+	
+		if self.head is None:
+			return
+			
+		self.size = self.size - 1
+		
+    # Setting up currentNode / previousNode at the beginning
+    currentNode = self.head
