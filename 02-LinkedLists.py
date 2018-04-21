@@ -21,7 +21,7 @@ class LinkedList(object):
 
   # O(1)
   def size1(self):                  
-    return self.size
+    return f"current size: {self.size}"
 
   # O(n):                          Traversing the Linkedlist
   def sizeN(self):            
