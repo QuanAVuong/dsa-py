@@ -87,3 +87,8 @@ class LinkedList(object):
 			print(f"currentNode: {currentNode.data} is a tail. No need to remove its nextNode reference that is already pointing to None")
 			previousNode.nextNode = currentNode.nextNode
 			print(f"previousNode: {previousNode.data} is now the new tail pointing to {previousNode.nextNode}")
+    else:
+			previousNode.nextNode = currentNode.nextNode
+			print(f"currentNode.nextNode is still pointing to nextNode: {currentNode.nextNode.data}")
+			currentNode.nextNode = None
+			print(f"removed currentNode's nextNode reference, now pointing to: {currentNode.nextNode}")
