@@ -7,3 +7,10 @@ class Stack:
 
   def push(self, data):
     self.stack.append(data)
+
+  def pop(self):
+		# data = self.stack[-1]
+		# del self.stack[-1]
+		# return data
+
+    return self.stack.pop()
