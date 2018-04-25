@@ -7,12 +7,19 @@ class Stack:
 
   def showStack(self):
     # [print(f"| {self.stack[-i-1]} |") if i < len(self.stack)-1 else print(f"|_{self.stack[-i-1]}_|") for i, v in enumerate(self.stack)]
-    for i, v in enumerate(self.stack):        
-      switcher           = {
-        0:                print(f"| {self.stack[-i-1]} | <--"),
-        # len(self.stack)-1: print(f"|_{self.stack[-i-1]}_|"),
-      }
-      switcher.get(i)
+    for i, v in enumerate(self.stack):
+      if i == 0: 
+        print(f"| {self.stack[-i-1]} | <--")
+      elif i < len(self.stack)-1:
+        print(f"| {self.stack[-i-1]} |")
+      else:
+        print(f"|_{self.stack[-i-1]}_|")
+        
+      # switcher           = {
+      #   0:                print(f"| {self.stack[-i-1]} | <--"),
+      #   # len(self.stack)-1: print(f"|_{self.stack[-i-1]}_|"),
+      # }
+      # switcher.get(i)
 
   def sizeStack(self):
     return f"Stack's size: {len(self.stack)}"
