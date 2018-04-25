@@ -22,3 +22,6 @@ class Stack:
 
   def sizeStack(self):
     return len(self.stack)
+
+
+stack = Stack()
