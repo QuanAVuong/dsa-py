@@ -9,8 +9,12 @@ class Stack:
     self.stack.append(data)
 
   def pop(self):
-		# data = self.stack[-1]
+    # data = self.stack[-1]
 		# del self.stack[-1]
 		# return data
-
+      
     return self.stack.pop()
+
+  
+  def peek(self):
+    return self.stack[-1]
