@@ -10,6 +10,8 @@ class Stack:
 
   def push(self, data):
     self.stack.append(data)
+    print(f"added {data} to the stack: ")
+    self.showStack()
 
   def pop(self):
     # data = self.stack[-1]
