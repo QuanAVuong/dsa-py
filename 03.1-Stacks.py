@@ -6,7 +6,6 @@ class Stack:
     return self.stack == []
 
   def showStack(self, operation=""):
-    # [print(f"| {self.stack[-i-1]} |") if i < len(self.stack)-1 else print(f"|_{self.stack[-i-1]}_|") for i, v in enumerate(self.stack)]
     for i, v in enumerate(self.stack):
       if i == 0 and operation == "push": 
         print("|___|" if self.sizeStack() == 1 else "|   |", f"<-- {self.stack[-i-1]}")
@@ -16,12 +15,6 @@ class Stack:
         print(f"| {self.stack[-i-1]} |")
       else:
         print(f"|_{self.stack[-i-1]}_|")
-        
-      # switcher           = {
-      #   0:                print(f"| {self.stack[-i-1]} | <--"),
-      #   # len(self.stack)-1: print(f"|_{self.stack[-i-1]}_|"),
-      # }
-      # switcher.get(i)
 
   def sizeStack(self):
     return len(self.stack)
@@ -54,6 +47,5 @@ print("Stack's size:", stack1.sizeStack())
 stack1.pop()
 stack1.pop()
 print("Stack's size:", stack1.sizeStack())
-# print("Peek:", stack1.peek())
-# print(stack1.sizeStack())
-stack1.showStack()
+
+print(f"Peeking...(  ~  .o) | {stack1.peek()} |")
