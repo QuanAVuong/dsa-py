@@ -5,7 +5,7 @@ class Stack:
   def isEmpty(self):
     return self.stack == []
 
-  def showStack(self, operation):
+  def showStack(self, operation=""):
     # [print(f"| {self.stack[-i-1]} |") if i < len(self.stack)-1 else print(f"|_{self.stack[-i-1]}_|") for i, v in enumerate(self.stack)]
     for i, v in enumerate(self.stack):
       if i == 0 and operation == "push": 
@@ -56,3 +56,4 @@ stack1.pop()
 print("Stack's size:", stack1.sizeStack())
 # print("Peek:", stack1.peek())
 # print(stack1.sizeStack())
+stack1.showStack()
