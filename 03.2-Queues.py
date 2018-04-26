@@ -7,11 +7,11 @@ class Queue:
     return self.queue == []
 
   def showQueue(self):
-    queueWall = "_" * ( 4 * self.sizeQueue() - 2 )
-    print(queueWall + "\n")
+    queueWall = "<" * ( 4 * self.sizeQueue() - 2 )
+    print(queueWall)
     for i, v in enumerate(self.queue):
       print(f"{v} ", end="  ") if i < self.sizeQueue() - 1 else print(f"{v} <--")
-    print(f"\n{queueWall}\n")
+    print(f"{queueWall}\n")
 
   def sizeQueue(self):
     return len(self.queue)
