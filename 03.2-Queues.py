@@ -11,3 +11,10 @@ class Queue:
 
 queue1 = Queue()
 print(queue1.isEmpty())
+
+queue1.enqueue(1)
+queue1.enqueue(2)
+queue1.enqueue(3)
+queue1.enqueue(4)
+queue1.enqueue(5)
+print(queue1.isEmpty())
