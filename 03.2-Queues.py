@@ -15,11 +15,13 @@ class Queue:
   
 
 queue1 = Queue()
-print(queue1.isEmpty())
+print("Is the queue empty ?", queue1.isEmpty())
+print("Queue's size:", queue1.sizeQueue())
 
 queue1.enqueue(1)
 queue1.enqueue(2)
 queue1.enqueue(3)
 queue1.enqueue(4)
 queue1.enqueue(5)
-print(queue1.isEmpty())
+print("Is the queue empty ?", queue1.isEmpty())
+print("Queue's size:", queue1.sizeQueue())
