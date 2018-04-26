@@ -11,6 +11,7 @@ class Queue:
 
   def enqueue(self, data):
     self.queue.append(data)
+    print(f"adding {data} to the queue")
 
   def dequeue(self):
     data = self.queue[0]
@@ -29,9 +30,9 @@ queue1.enqueue(5)
 print("Is the queue empty ?", queue1.isEmpty())
 print("Queue's size:", queue1.sizeQueue())
 
-queue1.dequeue()
+print("Removing", queue1.dequeue(), "from the queue")
 print("Queue's size:", queue1.sizeQueue())
-queue1.dequeue()
+print("Removing", queue1.dequeue(), "from the queue")
 print("Queue's size:", queue1.sizeQueue())
-queue1.dequeue()
+print("Removing", queue1.dequeue(), "from the queue")
 print("Queue's size:", queue1.sizeQueue())
