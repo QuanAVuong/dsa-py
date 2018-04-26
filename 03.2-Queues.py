@@ -18,7 +18,8 @@ class Queue:
 
   def enqueue(self, data):
     self.queue.append(data)
-    print(f"adding {data} to the queue")
+    print(f"adding {data} to the queue:")
+    self.showQueue()
 
   def dequeue(self):
     data = self.queue[0]
