@@ -6,7 +6,8 @@ class Queue:
   def isEmpty(self):
     return self.queue == []
 
-
+  def enqueue(self, data):
+    self.queue.append(data)
 
 queue1 = Queue()
 print(queue1.isEmpty())
