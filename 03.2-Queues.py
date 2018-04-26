@@ -6,6 +6,13 @@ class Queue:
   def isEmpty(self):
     return self.queue == []
 
+  def showQueue(self):
+    queueWall = "_" * ( 4 * self.sizeQueue() - 2 )
+    print(queueWall + "\n")
+    for i, v in enumerate(self.queue):
+      print(f"{v} ", end="  ") if i < self.sizeQueue() - 1 else print(f"{v} <--")
+    print(f"\n{queueWall}\n")
+
   def sizeQueue(self):
     return len(self.queue)
 
@@ -39,3 +46,5 @@ print("Removing", queue1.dequeue(), "from the queue")
 print("Queue's size:", queue1.sizeQueue())
 print("Removing", queue1.dequeue(), "from the queue")
 print("Queue's size:", queue1.sizeQueue())
+
+print("peeking:", queue1.peek())
