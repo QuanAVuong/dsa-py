@@ -5,3 +5,8 @@ class Queue:
   
   def isEmpty(self):
     return self.queue == []
+
+
+
+queue1 = Queue()
+print(queue1.isEmpty())
