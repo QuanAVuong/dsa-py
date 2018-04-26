@@ -18,6 +18,9 @@ class Queue:
     del self.queue[0]
     return data
 
+  def peek(self):
+    return self.queue[0]
+
 queue1 = Queue()
 print("Is the queue empty ?", queue1.isEmpty())
 print("Queue's size:", queue1.sizeQueue())
